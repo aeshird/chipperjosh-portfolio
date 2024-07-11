@@ -2127,6 +2127,37 @@ input, select, textarea {
 				width: 100%;
 			}
 
+/* Click on photo and make it full-screen */
+
+.image-gallery {
+	display: flex;
+	gap: 10px;
+  }
+  
+  .image-gallery img {
+	max-width: 100%;
+	cursor: pointer;
+  }
+  
+  .fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen img {
+    max-width: auto;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio and fits within the viewport */
+}
+
 /* Custom styles for Street Photography section */
 
 .wrapper.style5 .box.alt .custom-uniform .col-3 {
@@ -2144,6 +2175,25 @@ input, select, textarea {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure images cover the container uniformly */
+}
+
+.row.gtr-50.gtr-uniform {
+    display: flex;
+}
+
+.row.gtr-50.gtr-uniform .col-4 {
+    display: flex;
+    align-items: stretch;
+}
+
+.row.gtr-50.gtr-uniform .col-4 .image.fit {
+    display: flex;
+    align-items: stretch;
+}
+
+.row.gtr-50.gtr-uniform .col-4 .image.fit img {
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Responsive adjustments */
@@ -3372,7 +3422,6 @@ input, select, textarea {
 			position: absolute;
 			right: 0;
 			top: 0;
-			vertical-align: middle;
 			width: 7em;
 		}
 
