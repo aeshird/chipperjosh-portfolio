@@ -2158,16 +2158,17 @@ input, select, textarea {
     object-fit: contain; /* Ensures the image maintains its aspect ratio and fits within the viewport */
 }
 
-/* Custom styles for Street Photography section */
-
+/* Ensure all images in the custom-uniform class are the same size */
 .wrapper.style5 .box.alt .custom-uniform .col-3 {
+    flex: 0 0 25%; /* Ensure columns take up equal space */
+    max-width: 25%;
     padding: 0; /* Remove default padding/margin */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .wrapper.style5 .box.alt .custom-uniform .image.fit {
     width: 100%;
-    height: 200px; /* Set a fixed height for uniformity */
+    height: 250px; /* Set a fixed height for uniformity */
     overflow: hidden; /* Ensure content overflow is hidden */
 }
 
@@ -2175,29 +2176,15 @@ input, select, textarea {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure images cover the container uniformly */
+    display: block; /* Ensure block display to cover container */
 }
 
 .row.gtr-50.gtr-uniform {
     display: flex;
-}
-
-.row.gtr-50.gtr-uniform .col-4 {
-    display: flex;
-    align-items: stretch;
-}
-
-.row.gtr-50.gtr-uniform .col-4 .image.fit {
-    display: flex;
-    align-items: stretch;
-}
-
-.row.gtr-50.gtr-uniform .col-4 .image.fit img {
-    height: 100%;
-    object-fit: cover;
+    flex-wrap: wrap;
 }
 
 /* Responsive adjustments */
-
 @media screen and (max-width: 980px) {
     .wrapper.style5 .box.alt .custom-uniform .col-3 {
         flex: 0 0 50%; /* Adjust to 2 columns on medium screens */
