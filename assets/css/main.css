@@ -3934,3 +3934,25 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+/* Title */
+
+.top-left-title {
+    font-size: 0.8em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.225em;
+    color: #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    z-index: 1;
+}
+
+@media screen and (max-width: 736px) {
+    .top-left-title {
+        font-size: 0.65em;
+        letter-spacing: 0.15em;
+    }
+}
