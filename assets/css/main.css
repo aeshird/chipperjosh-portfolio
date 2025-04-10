@@ -3922,17 +3922,20 @@ body.is-preload #banner:after {
 /* Main */
 
 #main>header {
-	padding: 12em 0 10em 0;
-	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
-	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
-	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
-	background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
 	background-attachment: fixed;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
 }
+
+#main > header {
+	padding: 5em 0 5em 0 !important;
+  }
 
 #main>header h2 {
 	font-size: 1.75em;
@@ -4073,19 +4076,15 @@ body.is-mobile #main>header {
 /* Landing */
 
 body.landing #page-wrapper {
-	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
-	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
-	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
-	background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
 	background-attachment: fixed;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding-top: 0;
-}
-
-body.landing #footer {
-	background-color: rgba(29, 36, 42, 0.9);
 }
 
 body.is-mobile.landing #page-wrapper {
@@ -4094,17 +4093,13 @@ body.is-mobile.landing #page-wrapper {
 
 body.is-mobile.landing #banner,
 body.is-mobile.landing .wrapper.style4 {
-	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
-	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
-	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
-	background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/background.jpg");
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/Scanned\ Documents.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-body.is-mobile.landing #footer {
-	background-color: #1d242a;
 }
 
 /* Site Banner */
@@ -4163,7 +4158,167 @@ body.is-mobile.landing #footer {
 
 /* Force all gallery images to same height for visual consistency */
 .box.alt .image.fit img.uniform-height {
-	height: 400px;           /* or however tall you want */
+	height: 400px;
 	object-fit: cover;
 	width: 100%;
-  }
+}
+
+/* --- Gallery Layout Fix for Proper Alignment & 4-Up Display --- */
+
+.wrapper.style5 > .inner {
+  max-width: none;
+  width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 across */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.gallery-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  min-height: 300px;
+}
+
+/* NEW HOVER OVERLAY EFFECT */
+.gallery-tile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0); /* Initially transparent */
+  transition: background 0.3s ease;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.gallery-tile:hover::before {
+  background: rgba(0, 0, 0, 0.2); /* Soft gray overlay on hover */
+}
+/* END HOVER OVERLAY ADDITION */
+
+.gallery-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  z-index: 2; /* Make sure label appears above the overlay */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Override footer for all pages except index.html */
+body:not(.landing) #footer {
+	background-color: white;
+}
+
+body:not(.landing) #footer .icons a,
+body:not(.landing) #footer .copyright {
+	color: #1d242a; /* Matches the banner/nav color */
+}
+
+body:not(.landing) #footer .icons a:hover,
+body:not(.landing) #footer .copyright li a:hover {
+	color: #333;
+}
+
+body:not(.landing) #footer .copyright li {
+	border-left: solid 1px #1d242a;
+}
+
+body.is-preload {
+	background-image: url('..//images/Scanned\ Documents.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#banner .inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	gap: 1.5rem; /* Even vertical spacing between elements */
+}
+
+#banner .title-main {
+	font-size: 3.5rem;
+	margin: 0;
+	color: white;
+}
+
+#banner .roles {
+	font-size: 1.5rem;
+	letter-spacing: 0.05em;
+	color: white;
+	margin: 0;
+}
+
+/* Remove decorative bars from ChipperJosh title on landing page */
+#banner .inner h2::before,
+#banner .inner h2::after {
+  display: none !important;
+}
+
+#banner .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+#banner .inner h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#banner .inner h4 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+#banner .actions.special {
+  margin-top: 1rem;
+}
+
+#banner .roles {
+    font-size: 1em;         /* Make the text smaller */
+    letter-spacing: 0.1em;  /* Optional: for stylistic spacing */
+    text-transform: uppercase; /* Optional: style */
+}
+
+body.landing #site-banner {
+  display: none;
+}
