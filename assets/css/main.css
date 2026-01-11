@@ -4654,3 +4654,117 @@ body.videography h4 a:hover {
   color: #21b2a6;                   /* teal hover */
   border-bottom: 0;
 }
+
+/* Center captions under thumbnails on Commercial Videography page */
+body.videography #commercial .row.gtr-50.gtr-uniform > div > p {
+  text-align: center;
+}
+
+body.videography #commercial .image.fit {
+  margin-bottom: 0.75em;
+}
+
+body.videography #commercial .image.fit + p {
+  margin-top: 0;
+}
+
+/* ---------- FOOTER ---------- */
+:root{
+  --bannerFooterBg: #CCCCCC;
+  --bannerFooterText: #2e3842; /* old banner dark blue */
+}
+
+#footer{
+  background-color: var(--bannerFooterBg) !important;
+}
+
+/* Footer text + links/icons to dark blue */
+#footer,
+#footer *{
+  color: var(--bannerFooterText) !important;
+}
+
+/* Footer divider lines (were rgba white) */
+#footer .copyright li{
+  border-left-color: rgba(46,56,66,0.5) !important;
+}
+
+/* Footer icon hover can stay dark blue (no “white” pop) */
+#footer .icons a:hover{
+  color: var(--bannerFooterText) !important;
+}
+
+/* =========================================
+   FOOTER: half the size (height)
+   ========================================= */
+#footer{
+  /* was: 6em 0 4em 0 */
+  padding: 1.75em 0 1em 0 !important;
+}
+
+/* optional: slightly smaller icons + copyright so it “feels” tighter */
+#footer .icons{
+  font-size: 1em !important;        /* was 1.25em */
+}
+
+#footer .copyright{
+  font-size: 0.7em !important;      /* was .8em */
+  line-height: 1.4em !important;
+}
+
+/* ---------- FOOTER (smaller height, same internal spacing) ---------- */
+#footer{
+  padding: 1.5em 0 1.5em 0 !important; /* smaller than 6em 0 4em 0 */
+}
+
+/* match the theme’s breakpoints but smaller */
+@media screen and (max-width:980px){
+  #footer{
+    padding: 2.25em 3em 1.25em 3em !important; /* smaller than 4em 3em 2em 3em */
+  }
+}
+
+@media screen and (max-width:736px){
+  #footer{
+    padding: 2em 2em 0.75em 2em !important; /* smaller than 3em 2em 1em 2em */
+  }
+}
+
+/* =========================
+   FOOTER: perfectly centered
+   (equal space above icons and below text)
+   ========================= */
+
+#footer{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important; /* vertical center */
+  align-items: center !important;     /* horizontal center */
+  text-align: center !important;
+
+  /* pick ONE height feel */
+  padding: 1.5em 0 !important;        /* equal top/bottom padding */
+  gap: 0.75em;                        /* space between icons + text */
+}
+
+/* remove any extra spacing that breaks centering */
+#footer .icons,
+#footer .copyright{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* keep your sizing tweaks if you want */
+#footer .icons{ font-size: 1em !important; }
+#footer .copyright{
+  font-size: 0.7em !important;
+  line-height: 1.4em !important;
+}
+
+/* responsive padding (still centered) */
+@media screen and (max-width:980px){
+  #footer{ padding: 1.5em 0 !important; }
+}
+@media screen and (max-width:736px){
+  #footer{ padding: 1.25em 0 !important; }
+}
