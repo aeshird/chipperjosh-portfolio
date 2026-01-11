@@ -4768,3 +4768,55 @@ body.videography #commercial .image.fit + p {
 @media screen and (max-width:736px){
   #footer{ padding: 1.25em 0 !important; }
 }
+
+/* =========================
+   HEADER / MENU BAR COLORS
+   ========================= */
+:root{
+  --menuBarBg: #CCCCCC;
+  --menuBarText: #2e3842; /* old dark blue */
+}
+
+/* Top fixed header bar */
+#header{
+  background-color: var(--menuBarBg) !important;
+}
+
+/* Header brand + nav text */
+#header,
+#header h1 a,
+#header nav > ul > li > a{
+  color: var(--menuBarText) !important;
+}
+
+/* Menu toggle (hamburger) */
+#header nav > ul > li > a.menuToggle:after{
+  filter: brightness(0) saturate(100%) invert(18%) sepia(14%) saturate(706%) hue-rotate(169deg) brightness(92%) contrast(90%);
+  /* makes the SVG appear like #2e3842 */
+}
+
+/* =========================
+   HEADER / MENU BAR COLORS
+   ========================= */
+
+:root{
+  --menuBg: #ffffff;
+  --menuText: #2e3842;    /* ChippeJosh dark blue */
+}
+
+/* Header bar */
+#header{
+  background-color: var(--menuBg) !important;
+}
+
+/* Logo + nav text */
+#header,
+#header h1 a,
+#header nav > ul > li > a{
+  color: var(--menuText) !important;
+}
+
+/* Hamburger icon */
+#header nav > ul > li > a.menuToggle:after{
+  filter: brightness(0) saturate(100%) invert(18%) sepia(14%) saturate(706%) hue-rotate(169deg) brightness(92%) contrast(90%);
+}
