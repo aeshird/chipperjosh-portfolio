@@ -4116,6 +4116,44 @@ body.street .box.alt .row.gtr-uniform .image.fit img {
 	display: block
 }
 
+/* =========================================================
+   STREET — match AUTOMOTIVE tile heights
+   ========================================================= */
+
+body.street .box.alt .row.gtr-50.gtr-uniform .image.fit {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  display: block;
+}
+
+body.street .box.alt .row.gtr-50.gtr-uniform .image.fit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* or center, or 50% 35% etc */
+  display: block;
+}
+
+/* MATCH AUTOMOTIVE */
+body.street .box.alt .row.gtr-50.gtr-uniform .image.fit.portrait {
+  aspect-ratio: 3 / 4;
+}
+
+body.street .box.alt .row.gtr-50.gtr-uniform .image.fit.landscape {
+  aspect-ratio: 16 / 10;
+}
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+  body.street .box.alt .row.gtr-50.gtr-uniform .image.fit.portrait {
+    aspect-ratio: 3 / 4;
+  }
+  body.street .box.alt .row.gtr-50.gtr-uniform .image.fit.landscape {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 .poptrox-overlay {
 	position: fixed !important;
 	top: 0;
@@ -4461,7 +4499,7 @@ body.automotive .box.alt .row.gtr-50.gtr-uniform .image.fit img {
   width: 100%;
   height: 100%;
   object-fit: cover;      /* matches your reference look */
-  object-position: center;
+  object-position: center top; /* or center, or 50% 35% etc */
   display: block;
 }
 
@@ -4485,8 +4523,134 @@ body.automotive .box.alt .row.gtr-50.gtr-uniform .image.fit.landscape {
   }
 }
 
-/* ONLY reduce how tall portrait images can get */
-body.automotive .image.fit.portrait {
-  max-height: 85vh;        /* limits height to viewport */
+/* =========================================================
+   PORTRAIT — match AUTOMOTIVE tile heights
+   ========================================================= */
+
+body.portrait .box.alt .row.gtr-50.gtr-uniform .image.fit {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  display: block;
 }
 
+body.portrait .box.alt .row.gtr-50.gtr-uniform .image.fit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* or center, or 50% 35% etc */
+  display: block;
+}
+
+/* MATCH AUTOMOTIVE */
+body.portrait .box.alt .row.gtr-50.gtr-uniform .image.fit.portrait {
+  aspect-ratio: 3 / 4;
+}
+
+body.portrait .box.alt .row.gtr-50.gtr-uniform .image.fit.landscape {
+  aspect-ratio: 16 / 10;
+}
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+  body.portrait .box.alt .row.gtr-50.gtr-uniform .image.fit.portrait {
+    aspect-ratio: 3 / 4;
+  }
+  body.portrait .box.alt .row.gtr-50.gtr-uniform .image.fit.landscape {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* =========================
+   PHOTOGRAPHY page: make tiles fill more of the screen
+   ========================= */
+
+body.photography .wrapper.style5 > .inner {
+  width: 90%;
+  max-width: 1400px;  /* bump up/down to taste */
+}
+
+/* optional: reduce the gaps between the 4 tiles */
+body.photography #photography .row.gtr-50 {
+  margin-left: -0.5em;
+}
+body.photography #photography .row.gtr-50 > * {
+  padding-left: 0.5em;
+}
+body.photography #photography .row.gtr-50.gtr-uniform {
+  margin-top: -0.5em;
+}
+body.photography #photography .row.gtr-50.gtr-uniform > * {
+  padding-top: 0.5em;
+}
+
+/* optional: make the thumbnails a bit taller too */
+body.photography .box.alt .row.gtr-uniform .image.fit {
+  aspect-ratio: 4 / 5; /* was 3 / 4 */
+}
+
+/* =========================================================
+   VIDEOGRAPHY — match AUTOMOTIVE tile heights + spacing
+   ========================================================= */
+
+body.videography #videography h4 {
+  margin: 0 0 0.75em 0;   /* text -> image gap (match commercial feel) */
+}
+
+body.videography #videography .image.fit {
+  margin: 0;              /* remove theme's default 0 0 2em 0 */
+  overflow: hidden;
+  border-radius: 3px;
+  display: block;
+}
+
+body.videography #videography .image.fit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* first two (portrait) smaller: match Automotive portrait height */
+body.videography #videography .image.fit.portrait {
+  aspect-ratio: 3 / 4;
+}
+
+/* last two (landscape) same height as each other */
+body.videography #videography .image.fit.landscape {
+  aspect-ratio: 16 / 10;
+}
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+  body.videography #videography .image.fit.landscape {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* VIDEOGRAPHY: add gap BELOW the first-row images (between rows) */
+body.videography #videography .col-6 .image.fit {
+  margin: 0 0 2.5em 0;   /* this creates the missing space */
+}
+
+/* Optional: remove that gap after the LAST row so you don't get extra space at the bottom */
+body.videography #videography .col-6:nth-last-child(-n+2) .image.fit {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   VIDEOGRAPHY — match Photography hover behavior
+   teal hover, no underline
+   ========================================================= */
+
+body.videography h4 a {
+  border-bottom: 0;                 /* remove underline */
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+body.videography h4 a:hover {
+  color: #21b2a6;                   /* teal hover */
+  border-bottom: 0;
+}
