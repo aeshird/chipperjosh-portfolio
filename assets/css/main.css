@@ -4820,3 +4820,127 @@ body.videography #commercial .image.fit + p {
 #header nav > ul > li > a.menuToggle:after{
   filter: brightness(0) saturate(100%) invert(18%) sepia(14%) saturate(706%) hue-rotate(169deg) brightness(92%) contrast(90%);
 }
+
+/* Disable banner animations completely */
+#banner,
+#banner * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+/* Remove horizontal bars around banner title */
+#banner h2:before,
+#banner h2:after {
+    display: none !important;
+    content: none !important;
+}
+
+#banner h2 {
+    margin-bottom: 0.5em;
+}
+
+/* Center banner content cleanly */
+#banner .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Make banner buttons perfectly aligned/centered */
+#banner .actions.special {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;      /* kills the theme's negative left margin */
+    padding-left: 0;
+    gap: 0.5em;
+}
+
+#banner .actions.special li {
+    padding-left: 0;     /* kills the theme's left padding per <li> */
+}
+
+#banner .actions.special .button {
+    display: block;
+    width: 260px;        /* pick your width */
+    padding-left: 0;     /* optional: remove side padding so widths match visually */
+    padding-right: 0;
+    text-align: center;
+}
+
+/* Make the big banner title ("ChipperJosh") larger */
+#banner h2{
+  font-size: 2.5em !important;   /* try 2.5em–4em */
+  line-height: 1.1 !important;
+}
+
+/* Mobile */
+@media screen and (max-width:736px){
+  #banner h2{
+    font-size: 2em !important;
+  }
+}
+
+/* Center banner buttons exactly under CHIPPERJOSH */
+#banner .actions.special {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center;
+  margin: 0 !important;       /* removes theme offset */
+  padding: 0 !important;
+  gap: 0.6em;
+}
+
+#banner .actions.special li {
+  padding: 0 !important;      /* removes left shift */
+  margin: 0 !important;
+}
+
+/* Slightly smaller banner buttons (Photography / Videography only) */
+#banner .button {
+  font-size: 0.75em !important;   /* was ~1.25em visually */
+  height: 2.75em;
+  line-height: 2.75em;
+  padding: 0 2.25em;
+}
+
+#banner .button {
+  width: 260px;
+  text-align: center;
+}
+
+/* Ensure banner content is truly centered */
+#banner .inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Reset theme offsets and center buttons */
+#banner ul.actions {
+  margin: 0 !important;          /* removes margin-left:-1em */
+  padding: 0 !important;
+  width: auto !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.6em;
+}
+
+#banner ul.actions li {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Slightly smaller buttons (≈ 0.5em smaller visually) */
+#banner .button {
+  font-size: 0.75em !important;
+  width: 260px;
+  height: 2.75em;
+  line-height: 2.75em;
+  text-align: center;
+}
