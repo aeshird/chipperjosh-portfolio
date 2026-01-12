@@ -4944,3 +4944,19 @@ body.videography #commercial .image.fit + p {
   line-height: 2.75em;
   text-align: center;
 }
+
+/* --- Top header menu bar (no pop-out) --- */
+#header nav > ul > li > a{
+  padding: 0 1em;        /* tighter than the default 1.5em */
+  font-size: 0.75em;     /* optional: helps it fit */
+}
+
+/* optional: on small screens, wrap nicely instead of overflowing */
+@media screen and (max-width: 736px){
+  #header nav > ul{
+    white-space: normal;
+  }
+  #header nav > ul > li > a{
+    padding: 0 0.75em;
+  }
+}
